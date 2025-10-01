@@ -1,0 +1,24 @@
+
+---
+
+###  .gitignore
+```gitignore
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node / npm (if used later)
+node_modules/
+npm-debug.log
+
+# Logs
+*.log
+
+# Build / Dist
+dist/
+build/
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
