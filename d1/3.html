@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="gradeform">
+        <label>Physics Marks</label>
+        <input type="number" id="phyMarks"><br><br>
+        <label>Maths Marks</label>
+        <input type="number" id="mathsMarks"><br><br>
+        <label>Chemistry Marks</label>
+        <input type="number" id="cheMarks"><br><br>
+        <button type="button" onclick="gradeCalculate()">Calculate</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function gradeCalculate(){
+            const sub1 = parseFloat(document.getElementById('phyMarks').value);
+            const sub2 = parseFloat(document.getElementById('mathsMarks').value);
+            const sub3 = parseFloat(document.getElementById('cheMarks').value);
+            add = sub1+sub2+sub3
+            output = "Grade is "+(add/3);
+            document.getElementById('result').innerHTML = output;
+        }
+    </script>
+</body>
+</html>

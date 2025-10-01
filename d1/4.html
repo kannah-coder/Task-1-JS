@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check if Argument is a String</title>
+</head>
+<body>
+        <h2>Check if the aurgument is String</h2>
+        <input type='text' id="input">
+        <button id="check" onclick="check2()">Check</button>
+        <div id="result"></div>
+        <script>
+            function check1(value){
+                return typeof value == 'string'
+            }
+            function check2(){
+                let value = document.getElementById("input").value;
+                let result = check1(value);
+                document.getElementById('result').innerHTML = result ? "It is a String" : "It is not a String"
+            }
+        </script>
+</body> 
+
+</html>

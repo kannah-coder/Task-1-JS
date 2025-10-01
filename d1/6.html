@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, init\ial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <form>
+        <label>Enter Number 1:</label>
+        <input id="num1" type="number">
+        <label>Enter Number 2:</label>
+        <input id="num2" type="number">
+        <label>Enter Operator:</label>
+        <input id="op" type="text">
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+    <h1 id="result"></h1>
+    <script>
+        function calculate(){
+            let num1 = parseInt(document.getElementById("num1").value)
+            let num2 = parseInt(document.getElementById("num2").value)
+            let op = document.getElementById("op").value
+            result = 0
+            switch(op){
+                case '+':
+                    result = num1+num2;
+                    break;
+                case '-':
+                    result = num1-num2;
+                    break;
+                case '*':
+                    result = num1*num2;
+                    break;
+                case '/':
+                    result = num1/num2;
+                    break;
+                default:
+                    result = "Invalid"
+            }
+            document.getElementById("result").innerHTML = "Result = " + result   
+        }
+    </script>
+</body>
+</html>

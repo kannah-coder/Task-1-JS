@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Details</h2>
+    <form id="StudentDetails">
+        <label>Name: </label>
+        <input type="text" id="name"><br><br>
+        <label>Age: </label>
+        <input type="number" id="age"><br><br>
+        <label>Class: </label>
+        <input type="text" id="class"><br><br>
+        <button type="button" id="check" onclick="checkDetails()">Check Details</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function checkDetails(){
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let class1 = document.getElementById("class").value;
+
+            result = true
+            if(name != 'Kannah' || age != 19 || class1 != 'CSE-G'){
+                result=false;
+            }
+            document.getElementById("result").innerHTML = result ? "Details are Correct" : "Details are wrong"
+        }
+    </script>
+
+</body>
+</html>
